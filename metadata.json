@@ -1,0 +1,7 @@
+{
+  "name": "Stage Hair Design",
+  "description": "Full-service Toronto salon in North York offering precision cuts, custom hair dyeing, digital & cold perms, Kérastase treatments, and Japanese straightening at 5455a Yonge St.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+
