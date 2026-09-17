@@ -224,7 +224,7 @@ export const STAFF_MEMBERS: StaffMember[] = [
     bio: 'With over a decade of celebrated hairstyling mastery across Toronto, Jackie designs tailored cuts that perfectly balance facial architecture and individual personality. Revered for precision women’s bobs and men’s cuts.',
     experience: '10+ Years Experience',
     specialties: ['Precision Haircut', 'Lived-In Color', "Men's Styling", 'Personalized Design'],
-    image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1964&auto=format&fit=crop',
+    image: 'https://ik.imagekit.io/kevfun/IMG-20260917-WA2750.jpg',
     instagram: '@stagehairdesign',
   },
   {
@@ -246,7 +246,7 @@ export const STAFF_MEMBERS: StaffMember[] = [
     bio: 'Renowned for high-lift minimal-damage bleaching, vibrant jewel tones (ruby reds, ash grey, lavender blues), hair extensions, and deeply relaxing scalp massages. His colors stay complimented for months.',
     experience: '10+ Years Experience',
     specialties: ['Zero-Damage Bleach', 'Ash & Vivid Color', 'Hair Extensions', 'Scalp Spa'],
-    image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1974&auto=format&fit=crop',
+    image: 'https://ik.imagekit.io/kevfun/IMG-20260917-WA2994.jpg',
     instagram: '@stagehairdesign',
   },
   {
@@ -257,7 +257,7 @@ export const STAFF_MEMBERS: StaffMember[] = [
     bio: 'Bringing global hair trends back to Stage Hair Design. Gavin creates modern butterfly layers, wolf cuts, and effortless everyday styles that clients can style in minutes at home.',
     experience: '7+ Years Experience',
     specialties: ['Butterfly Layers', 'Wolf Cuts', 'Dimensional Highlights', 'Blowouts'],
-    image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1976&auto=format&fit=crop',
+    image: 'https://ik.imagekit.io/kevfun/IMG-20260917-WA4823.jpg',
     instagram: '@stagehairdesign',
   }
 ];
@@ -275,7 +275,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     id: 'g2',
     title: 'Modern Japanese Digital Perm Wave',
     category: 'cuts',
-    image: 'https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/917d6f93-fb36-439a-8c48-884b67b35381_1600w.jpg',
+    image: 'https://ik.imagekit.io/kevfun/Modern_Japanese_Digital_Perm_Wave_hairstyleSoft_bouncy_digit.jpg',
     stylist: 'William',
     description: 'Soft, bouncy digital perm curls with natural air-dry memory and featherlight face-framing layers.',
   },
@@ -283,7 +283,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     id: 'g3',
     title: 'Newly Renovated Studio & Arched LED Stations',
     category: 'studio',
-    image: 'https://images.unsplash.com/photo-1522337660859-02fbefca4702?q=80&w=2069&auto=format&fit=crop',
+    image: 'https://ik.imagekit.io/kevfun/456717790_18275718358212940_3194287082651862533_n.jpg',
     stylist: 'Stage Hair Design Team',
     description: 'Spacious, modern interior on Yonge Street with arched mirror stations, luxury wash basins, and photo wall.',
   },
@@ -299,7 +299,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     id: 'g5',
     title: 'Vibrant Ruby Red & Coral Dyeing',
     category: 'color',
-    image: 'https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/4734259a-bad7-422f-981e-ce01e79184f2_1600w.jpg',
+    image: 'https://ik.imagekit.io/kevfun/d6b4c927-20e1-4022-aecd-a71317942d2b.png',
     stylist: 'Andy',
     description: 'Deep velvet crimson root melting into vibrant ruby red mid-lengths and textured waves.',
   },
@@ -307,7 +307,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     id: 'g6',
     title: 'Precision Textured Director Cut',
     category: 'cuts',
-    image: 'https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?q=80&w=2070&auto=format&fit=crop',
+    image: 'https://ik.imagekit.io/kevfun/Precision_Textured_Director_Cut_on_an_Asian_womanWeightless%20(2).jpg',
     stylist: 'Jackie Liu',
     description: 'Weightless internal layering designed for easy everyday maintenance and natural motion.',
   }
@@ -326,7 +326,7 @@ export const SOCIAL_POSTS: SocialPost[] = [
   },
   {
     id: 'sp2',
-    image: 'https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/917d6f93-fb36-439a-8c48-884b67b35381_1600w.jpg',
+    image: 'https://ik.imagekit.io/kevfun/Modern_Japanese_Digital_Perm_Wave_hairstyleSoft_bouncy_digit.jpg',
     caption: 'Effortless Korean digital perm by William! 🌊 Just wash, twist, and air-dry for luscious bouncy waves all year round.',
     stylist: 'William',
     likes: 492,
@@ -336,7 +336,7 @@ export const SOCIAL_POSTS: SocialPost[] = [
   },
   {
     id: 'sp3',
-    image: 'https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/4734259a-bad7-422f-981e-ce01e79184f2_1600w.jpg',
+    image: 'https://ik.imagekit.io/kevfun/d6b4c927-20e1-4022-aecd-a71317942d2b.png',
     caption: 'Vivid ruby red brilliance! ❤️ Custom formulated to compliment warm skin tones without fading brassy. Styled by Andy.',
     stylist: 'Andy',
     likes: 418,
@@ -346,7 +346,7 @@ export const SOCIAL_POSTS: SocialPost[] = [
   },
   {
     id: 'sp4',
-    image: 'https://images.unsplash.com/photo-1522337660859-02fbefca4702?q=80&w=800&auto=format&fit=crop',
+    image: 'https://ik.imagekit.io/kevfun/456717790_18275718358212940_3194287082651862533_n.jpg',
     caption: 'Clean, newly renovated salon vibes at 5455a Yonge St. ✂️ Come unwind with our Kérastase scalp SPA & beverage bar.',
     stylist: 'Jackie Liu',
     likes: 341,
