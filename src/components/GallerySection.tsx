@@ -23,19 +23,19 @@ export const GallerySection: React.FC<GallerySectionProps> = ({ onOpenLightbox }
     : GALLERY_ITEMS.filter(item => item.category === activeFilter);
 
   return (
-    <section id="gallery" className="py-24 bg-white">
+    <section id="gallery" className="py-24 bg-white dark:bg-stone-950 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
           <div>
-            <span className="text-xs font-semibold tracking-widest text-stone-500 uppercase">Portfolio • 作品集</span>
-            <h2 className="font-serif text-3xl md:text-4xl tracking-tight text-stone-900 mt-2">Stage Hair Portfolio</h2>
+            <span className="text-xs font-semibold tracking-widest text-stone-500 dark:text-stone-400 uppercase">Portfolio • 作品集</span>
+            <h2 className="font-serif text-3xl md:text-4xl tracking-tight text-stone-900 dark:text-white mt-2">Stage Hair Portfolio</h2>
           </div>
           <div className="flex items-center gap-4">
             <a
               href="https://www.instagram.com/stagehairdesign"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center text-sm font-medium text-stone-500 hover:text-rose-400 transition-colors"
+              className="flex items-center text-sm font-medium text-stone-500 dark:text-stone-400 hover:text-rose-500 dark:hover:text-rose-400 transition-colors"
             >
               <Instagram className="mr-2 w-4 h-4" />
               Follow @stagehairdesign
@@ -51,8 +51,8 @@ export const GallerySection: React.FC<GallerySectionProps> = ({ onOpenLightbox }
               onClick={() => setActiveFilter(tab.id)}
               className={`px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider transition-all cursor-pointer ${
                 activeFilter === tab.id
-                  ? 'bg-stone-900 text-white'
-                  : 'bg-stone-100 text-stone-600 hover:bg-stone-200'
+                  ? 'bg-stone-900 dark:bg-white text-white dark:text-stone-950'
+                  : 'bg-stone-100 dark:bg-stone-900 text-stone-600 dark:text-stone-300 hover:bg-stone-200 dark:hover:bg-stone-800'
               }`}
             >
               {tab.label}
@@ -66,14 +66,14 @@ export const GallerySection: React.FC<GallerySectionProps> = ({ onOpenLightbox }
             <div
               key={item.id}
               onClick={() => onOpenLightbox(item)}
-              className="break-inside-avoid rounded-xl overflow-hidden group relative cursor-pointer shadow-sm hover:shadow-lg transition-all"
+              className="break-inside-avoid rounded-xl overflow-hidden group relative cursor-pointer shadow-sm hover:shadow-lg transition-all border border-stone-100 dark:border-stone-800/80"
             >
               <img
                 src={item.image}
                 alt={item.title}
                 className="w-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-4 text-center">
+              <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-4 text-center backdrop-blur-[2px]">
                 <span className="text-white font-serif text-lg tracking-wide drop-shadow-md">
                   {item.title}
                 </span>

@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
   --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   --font-serif: 'Playfair Display', Georgia, serif;
@@ -14,6 +16,7 @@
   --color-stone-700: #44403c;
   --color-stone-800: #292524;
   --color-stone-900: #1c1917;
+  --color-stone-950: #0c0a09;
 
   --color-rose-50: #fff1f2;
   --color-rose-100: #ffe4e6;

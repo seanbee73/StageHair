@@ -89,13 +89,13 @@ export const BookingSystem: React.FC<BookingSystemProps> = ({
   };
 
   return (
-    <div id="book" className="bg-white p-8 rounded-2xl shadow-xl shadow-stone-200/50 border border-stone-100">
+    <div id="book" className="bg-white dark:bg-stone-950 p-8 rounded-2xl shadow-xl shadow-stone-200/50 dark:shadow-none border border-stone-100 dark:border-stone-800 transition-colors duration-300">
       <div className="flex items-center justify-between mb-6">
         <div>
-          <h3 className="font-serif text-2xl text-stone-900">Request Appointment</h3>
-          <p className="text-xs text-stone-500 mt-1">Instant confirmation • Stage Hair Design (5455a Yonge St)</p>
+          <h3 className="font-serif text-2xl text-stone-900 dark:text-white">Request Appointment</h3>
+          <p className="text-xs text-stone-500 dark:text-stone-400 mt-1">Instant confirmation • Stage Hair Design (5455a Yonge St)</p>
         </div>
-        <span className="hidden sm:inline-flex items-center gap-1 text-[11px] font-semibold bg-rose-50 text-rose-600 px-2.5 py-1 rounded-full">
+        <span className="hidden sm:inline-flex items-center gap-1 text-[11px] font-semibold bg-rose-50 dark:bg-rose-950/60 text-rose-600 dark:text-rose-400 px-2.5 py-1 rounded-full border border-rose-100 dark:border-rose-900/50">
           <Clock className="w-3 h-3" />
           Real-time Slots
         </span>
@@ -105,24 +105,24 @@ export const BookingSystem: React.FC<BookingSystemProps> = ({
         {/* Name Fields */}
         <div className="grid grid-cols-2 gap-4">
           <div className="space-y-1">
-            <label className="text-xs font-medium text-stone-500 uppercase">First Name</label>
+            <label className="text-xs font-medium text-stone-500 dark:text-stone-400 uppercase">First Name</label>
             <input
               type="text"
               required
               value={firstName}
               onChange={(e) => setFirstName(e.target.value)}
-              className="w-full px-4 py-3 rounded-lg border border-stone-200 focus:outline-none focus:border-rose-300 focus:ring-1 focus:ring-rose-300 transition-all bg-stone-50 text-stone-800 text-sm"
+              className="w-full px-4 py-3 rounded-lg border border-stone-200 dark:border-stone-700 focus:outline-none focus:border-rose-300 focus:ring-1 focus:ring-rose-300 transition-all bg-stone-50 dark:bg-stone-900 text-stone-800 dark:text-stone-100 text-sm"
               placeholder="Sarah"
             />
           </div>
           <div className="space-y-1">
-            <label className="text-xs font-medium text-stone-500 uppercase">Last Name</label>
+            <label className="text-xs font-medium text-stone-500 dark:text-stone-400 uppercase">Last Name</label>
             <input
               type="text"
               required
               value={lastName}
               onChange={(e) => setLastName(e.target.value)}
-              className="w-full px-4 py-3 rounded-lg border border-stone-200 focus:outline-none focus:border-rose-300 focus:ring-1 focus:ring-rose-300 transition-all bg-stone-50 text-stone-800 text-sm"
+              className="w-full px-4 py-3 rounded-lg border border-stone-200 dark:border-stone-700 focus:outline-none focus:border-rose-300 focus:ring-1 focus:ring-rose-300 transition-all bg-stone-50 dark:bg-stone-900 text-stone-800 dark:text-stone-100 text-sm"
               placeholder="Zhang"
             />
           </div>
@@ -131,24 +131,24 @@ export const BookingSystem: React.FC<BookingSystemProps> = ({
         {/* Contact info */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div className="space-y-1">
-            <label className="text-xs font-medium text-stone-500 uppercase">Email</label>
+            <label className="text-xs font-medium text-stone-500 dark:text-stone-400 uppercase">Email</label>
             <input
               type="email"
               required
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="w-full px-4 py-3 rounded-lg border border-stone-200 focus:outline-none focus:border-rose-300 focus:ring-1 focus:ring-rose-300 transition-all bg-stone-50 text-stone-800 text-sm"
+              className="w-full px-4 py-3 rounded-lg border border-stone-200 dark:border-stone-700 focus:outline-none focus:border-rose-300 focus:ring-1 focus:ring-rose-300 transition-all bg-stone-50 dark:bg-stone-900 text-stone-800 dark:text-stone-100 text-sm"
               placeholder="sarah@example.com"
             />
           </div>
           <div className="space-y-1">
-            <label className="text-xs font-medium text-stone-500 uppercase">Phone Number</label>
+            <label className="text-xs font-medium text-stone-500 dark:text-stone-400 uppercase">Phone Number</label>
             <input
               type="tel"
               required
               value={phone}
               onChange={(e) => setPhone(e.target.value)}
-              className="w-full px-4 py-3 rounded-lg border border-stone-200 focus:outline-none focus:border-rose-300 focus:ring-1 focus:ring-rose-300 transition-all bg-stone-50 text-stone-800 text-sm"
+              className="w-full px-4 py-3 rounded-lg border border-stone-200 dark:border-stone-700 focus:outline-none focus:border-rose-300 focus:ring-1 focus:ring-rose-300 transition-all bg-stone-50 dark:bg-stone-900 text-stone-800 dark:text-stone-100 text-sm"
               placeholder="(647) 350-8383"
             />
           </div>
@@ -157,8 +157,8 @@ export const BookingSystem: React.FC<BookingSystemProps> = ({
         {/* Service selection */}
         <div className="space-y-1">
           <div className="flex justify-between items-center">
-            <label className="text-xs font-medium text-stone-500 uppercase">Service Selection</label>
-            <span className="text-xs font-semibold text-rose-500">
+            <label className="text-xs font-medium text-stone-500 dark:text-stone-400 uppercase">Service Selection</label>
+            <span className="text-xs font-semibold text-rose-500 dark:text-rose-400">
               {currentService.price} ({currentService.duration})
             </span>
           </div>
@@ -166,10 +166,10 @@ export const BookingSystem: React.FC<BookingSystemProps> = ({
             <select
               value={serviceId}
               onChange={(e) => setServiceId(e.target.value)}
-              className="w-full px-4 py-3 rounded-lg border border-stone-200 focus:outline-none focus:border-rose-300 focus:ring-1 focus:ring-rose-300 transition-all bg-stone-50 appearance-none text-stone-800 text-sm cursor-pointer pr-10"
+              className="w-full px-4 py-3 rounded-lg border border-stone-200 dark:border-stone-700 focus:outline-none focus:border-rose-300 focus:ring-1 focus:ring-rose-300 transition-all bg-stone-50 dark:bg-stone-900 appearance-none text-stone-800 dark:text-stone-100 text-sm cursor-pointer pr-10"
             >
               {SALON_SERVICES.map((s) => (
-                <option key={s.id} value={s.id}>
+                <option key={s.id} value={s.id} className="bg-white dark:bg-stone-900 text-stone-900 dark:text-stone-100">
                   {s.name} — {s.price} ({s.duration})
                 </option>
               ))}
@@ -180,16 +180,16 @@ export const BookingSystem: React.FC<BookingSystemProps> = ({
 
         {/* Stylist Selection */}
         <div className="space-y-1">
-          <label className="text-xs font-medium text-stone-500 uppercase">Preferred Stylist / Director</label>
+          <label className="text-xs font-medium text-stone-500 dark:text-stone-400 uppercase">Preferred Stylist / Director</label>
           <div className="relative">
             <select
               value={stylistId}
               onChange={(e) => setStylistId(e.target.value)}
-              className="w-full px-4 py-3 rounded-lg border border-stone-200 focus:outline-none focus:border-rose-300 focus:ring-1 focus:ring-rose-300 transition-all bg-stone-50 appearance-none text-stone-800 text-sm cursor-pointer pr-10"
+              className="w-full px-4 py-3 rounded-lg border border-stone-200 dark:border-stone-700 focus:outline-none focus:border-rose-300 focus:ring-1 focus:ring-rose-300 transition-all bg-stone-50 dark:bg-stone-900 appearance-none text-stone-800 dark:text-stone-100 text-sm cursor-pointer pr-10"
             >
-              <option value="any">Any Available Technical Director / Stylist</option>
+              <option value="any" className="bg-white dark:bg-stone-900 text-stone-900 dark:text-stone-100">Any Available Technical Director / Stylist</option>
               {STAFF_MEMBERS.map((m) => (
-                <option key={m.id} value={m.id}>
+                <option key={m.id} value={m.id} className="bg-white dark:bg-stone-900 text-stone-900 dark:text-stone-100">
                   {m.name} ({m.role})
                 </option>
               ))}
@@ -201,7 +201,7 @@ export const BookingSystem: React.FC<BookingSystemProps> = ({
         {/* Date & Time Slot selection */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div className="space-y-1">
-            <label className="text-xs font-medium text-stone-500 uppercase">Preferred Date</label>
+            <label className="text-xs font-medium text-stone-500 dark:text-stone-400 uppercase">Preferred Date</label>
             <div className="relative">
               <input
                 type="date"
@@ -209,20 +209,20 @@ export const BookingSystem: React.FC<BookingSystemProps> = ({
                 value={date}
                 min={new Date().toISOString().split('T')[0]}
                 onChange={(e) => setDate(e.target.value)}
-                className="w-full px-4 py-3 rounded-lg border border-stone-200 focus:outline-none focus:border-rose-300 focus:ring-1 focus:ring-rose-300 transition-all bg-stone-50 text-stone-800 text-sm"
+                className="w-full px-4 py-3 rounded-lg border border-stone-200 dark:border-stone-700 focus:outline-none focus:border-rose-300 focus:ring-1 focus:ring-rose-300 transition-all bg-stone-50 dark:bg-stone-900 text-stone-800 dark:text-stone-100 text-sm"
               />
             </div>
           </div>
           <div className="space-y-1">
-            <label className="text-xs font-medium text-stone-500 uppercase">Time Slot (Open 12pm - 8pm)</label>
+            <label className="text-xs font-medium text-stone-500 dark:text-stone-400 uppercase">Time Slot (Open 12pm - 8pm)</label>
             <div className="relative">
               <select
                 value={timeSlot}
                 onChange={(e) => setTimeSlot(e.target.value)}
-                className="w-full px-4 py-3 rounded-lg border border-stone-200 focus:outline-none focus:border-rose-300 focus:ring-1 focus:ring-rose-300 transition-all bg-stone-50 appearance-none text-stone-800 text-sm cursor-pointer pr-10"
+                className="w-full px-4 py-3 rounded-lg border border-stone-200 dark:border-stone-700 focus:outline-none focus:border-rose-300 focus:ring-1 focus:ring-rose-300 transition-all bg-stone-50 dark:bg-stone-900 appearance-none text-stone-800 dark:text-stone-100 text-sm cursor-pointer pr-10"
               >
                 {timeSlots.map((slot) => (
-                  <option key={slot} value={slot}>
+                  <option key={slot} value={slot} className="bg-white dark:bg-stone-900 text-stone-900 dark:text-stone-100">
                     {slot}
                   </option>
                 ))}
@@ -239,9 +239,9 @@ export const BookingSystem: React.FC<BookingSystemProps> = ({
               type="checkbox"
               checked={isNewClient}
               onChange={(e) => setIsNewClient(e.target.checked)}
-              className="custom-checkbox"
+              className="custom-checkbox accent-rose-500"
             />
-            <span className="text-sm text-stone-600">
+            <span className="text-sm text-stone-600 dark:text-stone-300">
               I am a new client (includes complimentary 1-on-1 style & color consultation)
             </span>
           </label>
@@ -251,7 +251,7 @@ export const BookingSystem: React.FC<BookingSystemProps> = ({
         <button
           type="submit"
           disabled={isSubmitting}
-          className="w-full py-4 bg-stone-900 hover:bg-rose-500 hover:text-white text-white font-medium rounded-lg transition-all duration-300 flex items-center justify-center space-x-2 mt-4 cursor-pointer shadow-md disabled:opacity-75"
+          className="w-full py-4 bg-stone-900 dark:bg-white hover:bg-rose-500 dark:hover:bg-rose-400 text-white dark:text-stone-950 font-medium rounded-lg transition-all duration-300 flex items-center justify-center space-x-2 mt-4 cursor-pointer shadow-md disabled:opacity-75"
         >
           {isSubmitting ? (
             <span>Securing Appointment...</span>
@@ -263,7 +263,7 @@ export const BookingSystem: React.FC<BookingSystemProps> = ({
           )}
         </button>
 
-        <p className="text-xs text-center text-stone-400 mt-4">
+        <p className="text-xs text-center text-stone-400 dark:text-stone-500 mt-4">
           Instant Confirmation • Stage Hair Design Toronto
         </p>
       </form>

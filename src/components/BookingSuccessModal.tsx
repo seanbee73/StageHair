@@ -47,73 +47,73 @@ END:VCALENDAR`;
 
   return (
     <div className="fixed inset-0 z-50 bg-stone-950/80 backdrop-blur-md flex items-center justify-center p-4 sm:p-6 overflow-y-auto">
-      <div className="bg-white rounded-3xl p-6 sm:p-8 max-w-lg w-full shadow-2xl border border-stone-200 relative animate-in fade-in zoom-in-95 duration-200">
+      <div className="bg-white dark:bg-stone-900 rounded-3xl p-6 sm:p-8 max-w-lg w-full shadow-2xl border border-stone-200 dark:border-stone-800 relative animate-in fade-in zoom-in-95 duration-200 transition-colors">
         <button
           onClick={onClose}
           aria-label="Close"
-          className="absolute top-5 right-5 text-stone-400 hover:text-stone-800 p-1 rounded-full transition-colors cursor-pointer"
+          className="absolute top-5 right-5 text-stone-400 hover:text-stone-800 dark:hover:text-stone-200 p-1 rounded-full transition-colors cursor-pointer"
         >
           <X className="w-5 h-5" />
         </button>
 
         {/* Success Icon */}
-        <div className="text-center pb-6 border-b border-stone-100">
-          <div className="w-14 h-14 bg-rose-50 text-rose-500 rounded-full flex items-center justify-center mx-auto mb-3 shadow-inner">
-            <CheckCircle2 className="w-8 h-8 text-rose-500" />
+        <div className="text-center pb-6 border-b border-stone-100 dark:border-stone-800">
+          <div className="w-14 h-14 bg-rose-50 dark:bg-rose-950/60 text-rose-500 dark:text-rose-400 rounded-full flex items-center justify-center mx-auto mb-3 shadow-inner border border-rose-100 dark:border-rose-900/50">
+            <CheckCircle2 className="w-8 h-8 text-rose-500 dark:text-rose-400" />
           </div>
-          <span className="text-[11px] font-semibold tracking-widest text-rose-500 uppercase">
+          <span className="text-[11px] font-semibold tracking-widest text-rose-500 dark:text-rose-400 uppercase">
             Appointment Request Confirmed
           </span>
-          <h3 className="font-serif text-2xl md:text-3xl text-stone-900 mt-1">
+          <h3 className="font-serif text-2xl md:text-3xl text-stone-900 dark:text-white mt-1">
             See You Soon, {details.firstName}!
           </h3>
-          <p className="text-xs text-stone-500 mt-1">
-            Stage Hair Design has received your booking. We'll contact you at <strong>{details.phone}</strong> / <strong>{details.email}</strong>.
+          <p className="text-xs text-stone-500 dark:text-stone-400 mt-1">
+            Stage Hair Design has received your booking. We'll contact you at <strong className="text-stone-700 dark:text-stone-300">{details.phone}</strong> / <strong className="text-stone-700 dark:text-stone-300">{details.email}</strong>.
           </p>
         </div>
 
         {/* Appointment Card Recap */}
-        <div className="my-6 bg-stone-50 rounded-2xl p-5 border border-stone-200/70 space-y-3.5 text-xs text-stone-700">
-          <div className="flex items-center justify-between pb-2 border-b border-stone-200/50">
-            <span className="text-stone-500 font-medium uppercase text-[10px] tracking-wider">Service</span>
-            <span className="font-semibold text-stone-900 text-right">{details.serviceName}</span>
+        <div className="my-6 bg-stone-50 dark:bg-stone-950/80 rounded-2xl p-5 border border-stone-200/70 dark:border-stone-800 space-y-3.5 text-xs text-stone-700 dark:text-stone-300">
+          <div className="flex items-center justify-between pb-2 border-b border-stone-200/50 dark:border-stone-800">
+            <span className="text-stone-500 dark:text-stone-400 font-medium uppercase text-[10px] tracking-wider">Service</span>
+            <span className="font-semibold text-stone-900 dark:text-white text-right">{details.serviceName}</span>
           </div>
 
           <div className="flex items-center justify-between">
-            <span className="text-stone-500 flex items-center gap-1.5">
-              <User className="w-3.5 h-3.5 text-rose-500" />
+            <span className="text-stone-500 dark:text-stone-400 flex items-center gap-1.5">
+              <User className="w-3.5 h-3.5 text-rose-500 dark:text-rose-400" />
               Stylist / Director
             </span>
-            <span className="font-semibold text-stone-900">{details.stylistName}</span>
+            <span className="font-semibold text-stone-900 dark:text-white">{details.stylistName}</span>
           </div>
 
           <div className="flex items-center justify-between">
-            <span className="text-stone-500 flex items-center gap-1.5">
-              <Calendar className="w-3.5 h-3.5 text-rose-500" />
+            <span className="text-stone-500 dark:text-stone-400 flex items-center gap-1.5">
+              <Calendar className="w-3.5 h-3.5 text-rose-500 dark:text-rose-400" />
               Date
             </span>
-            <span className="font-semibold text-stone-900">{details.date}</span>
+            <span className="font-semibold text-stone-900 dark:text-white">{details.date}</span>
           </div>
 
           <div className="flex items-center justify-between">
-            <span className="text-stone-500 flex items-center gap-1.5">
-              <Clock className="w-3.5 h-3.5 text-rose-500" />
+            <span className="text-stone-500 dark:text-stone-400 flex items-center gap-1.5">
+              <Clock className="w-3.5 h-3.5 text-rose-500 dark:text-rose-400" />
               Time & Duration
             </span>
-            <span className="font-semibold text-stone-900">{details.timeSlot} ({details.duration})</span>
+            <span className="font-semibold text-stone-900 dark:text-white">{details.timeSlot} ({details.duration})</span>
           </div>
 
-          <div className="flex items-center justify-between pt-2 border-t border-stone-200/50">
-            <span className="text-stone-500">Estimated Rate</span>
-            <span className="font-serif text-base font-semibold text-stone-900">{details.price}</span>
+          <div className="flex items-center justify-between pt-2 border-t border-stone-200/50 dark:border-stone-800">
+            <span className="text-stone-500 dark:text-stone-400">Estimated Rate</span>
+            <span className="font-serif text-base font-semibold text-stone-900 dark:text-white">{details.price}</span>
           </div>
         </div>
 
         {/* Studio Location Reminder */}
-        <div className="flex items-start gap-2.5 text-xs text-stone-600 mb-6 bg-rose-50/60 p-3.5 rounded-xl border border-rose-100">
-          <MapPin className="w-4 h-4 text-rose-500 flex-shrink-0 mt-0.5" />
+        <div className="flex items-start gap-2.5 text-xs text-stone-600 dark:text-stone-300 mb-6 bg-rose-50/60 dark:bg-rose-950/40 p-3.5 rounded-xl border border-rose-100 dark:border-rose-900/50">
+          <MapPin className="w-4 h-4 text-rose-500 dark:text-rose-400 flex-shrink-0 mt-0.5" />
           <span>
-            <strong>Stage Hair Design:</strong> 5455a Yonge St, North York, Toronto, ON M2N 5S1. Tel: (647) 350-8383. Near Finch TTC Subway.
+            <strong className="text-stone-900 dark:text-white">Stage Hair Design:</strong> 5455a Yonge St, North York, Toronto, ON M2N 5S1. Tel: (647) 350-8383. Near Finch TTC Subway.
           </span>
         </div>
 
@@ -121,14 +121,14 @@ END:VCALENDAR`;
         <div className="flex flex-col sm:flex-row gap-3">
           <button
             onClick={handleDownloadCalendar}
-            className="flex-1 py-3 px-4 rounded-full border border-stone-300 text-stone-800 text-xs font-semibold uppercase tracking-wider hover:bg-stone-50 transition-colors flex items-center justify-center gap-2 cursor-pointer"
+            className="flex-1 py-3 px-4 rounded-full border border-stone-300 dark:border-stone-700 text-stone-800 dark:text-stone-200 text-xs font-semibold uppercase tracking-wider hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors flex items-center justify-center gap-2 cursor-pointer"
           >
             <Download className="w-4 h-4" />
             <span>Add to Calendar (.ics)</span>
           </button>
           <button
             onClick={onClose}
-            className="flex-1 py-3 px-4 rounded-full bg-stone-900 text-white text-xs font-semibold uppercase tracking-wider hover:bg-rose-400 hover:text-stone-900 transition-all cursor-pointer shadow-md"
+            className="flex-1 py-3 px-4 rounded-full bg-stone-900 dark:bg-white text-white dark:text-stone-950 text-xs font-semibold uppercase tracking-wider hover:bg-rose-500 dark:hover:bg-rose-400 hover:text-white dark:hover:text-stone-950 transition-all cursor-pointer shadow-md"
           >
             Done
           </button>

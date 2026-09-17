@@ -14,7 +14,7 @@ export const Footer: React.FC<FooterProps> = ({ onScrollToSection, onOpenPriceLi
   };
 
   return (
-    <footer className="bg-stone-900 text-stone-300 py-12 border-t border-stone-800">
+    <footer className="bg-stone-900 dark:bg-stone-950 text-stone-300 py-12 border-t border-stone-800 dark:border-stone-900 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
         <div className="col-span-1 md:col-span-2">
           <div className="flex items-center gap-3">
@@ -124,7 +124,7 @@ export const Footer: React.FC<FooterProps> = ({ onScrollToSection, onOpenPriceLi
               href="https://www.instagram.com/stagehairdesign"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-10 h-10 rounded-full bg-stone-800 flex items-center justify-center hover:bg-rose-500 hover:text-white transition-all text-stone-300"
+              className="w-10 h-10 rounded-full bg-stone-800 hover:bg-rose-500 hover:text-white transition-all text-stone-300 flex items-center justify-center"
               aria-label="Instagram"
             >
               <Instagram className="w-5 h-5" />
@@ -133,7 +133,7 @@ export const Footer: React.FC<FooterProps> = ({ onScrollToSection, onOpenPriceLi
               href="https://www.facebook.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-10 h-10 rounded-full bg-stone-800 flex items-center justify-center hover:bg-rose-500 hover:text-white transition-all text-stone-300"
+              className="w-10 h-10 rounded-full bg-stone-800 hover:bg-rose-500 hover:text-white transition-all text-stone-300 flex items-center justify-center"
               aria-label="Facebook"
             >
               <Facebook className="w-5 h-5" />
@@ -142,7 +142,7 @@ export const Footer: React.FC<FooterProps> = ({ onScrollToSection, onOpenPriceLi
 
           <button
             onClick={scrollToTop}
-            className="inline-flex items-center gap-1.5 text-xs text-stone-400 hover:text-white transition-colors cursor-pointer border border-stone-800 px-3 py-1.5 rounded-full"
+            className="inline-flex items-center gap-1.5 text-xs text-stone-400 hover:text-white transition-colors cursor-pointer border border-stone-800 dark:border-stone-800 px-3 py-1.5 rounded-full"
           >
             <ArrowUp className="w-3.5 h-3.5" />
             <span>Back to top</span>
@@ -150,7 +150,7 @@ export const Footer: React.FC<FooterProps> = ({ onScrollToSection, onOpenPriceLi
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 mt-12 pt-8 border-t border-stone-800 text-xs text-stone-500 flex flex-col md:flex-row justify-between items-center">
+      <div className="max-w-7xl mx-auto px-6 mt-12 pt-8 border-t border-stone-800 dark:border-stone-900 text-xs text-stone-500 flex flex-col md:flex-row justify-between items-center">
         <p>&copy; 2026 Stage Hair Design (5455a Yonge St, North York, ON). All rights reserved.</p>
         <div className="flex space-x-6 mt-4 md:mt-0">
           <button
@@ -171,11 +171,11 @@ export const Footer: React.FC<FooterProps> = ({ onScrollToSection, onOpenPriceLi
       {/* Legal Dialog */}
       {legalModal && (
         <div className="fixed inset-0 z-50 bg-stone-950/80 backdrop-blur-sm flex items-center justify-center p-4">
-          <div className="bg-white text-stone-800 rounded-2xl p-8 max-w-lg w-full shadow-2xl border border-stone-200">
-            <h3 className="font-serif text-2xl text-stone-900 mb-4 capitalize">
+          <div className="bg-white dark:bg-stone-900 text-stone-800 dark:text-stone-200 rounded-2xl p-8 max-w-lg w-full shadow-2xl border border-stone-200 dark:border-stone-800 transition-colors">
+            <h3 className="font-serif text-2xl text-stone-900 dark:text-white mb-4 capitalize">
               {legalModal === 'privacy' ? 'Privacy Policy' : 'Salon Terms & Policies'}
             </h3>
-            <div className="text-xs text-stone-600 space-y-3 max-h-72 overflow-y-auto pr-2 leading-relaxed">
+            <div className="text-xs text-stone-600 dark:text-stone-300 space-y-3 max-h-72 overflow-y-auto pr-2 leading-relaxed">
               {legalModal === 'privacy' ? (
                 <>
                   <p>At Stage Hair Design, client privacy is paramount. Information submitted for appointments or inquiries is used solely to coordinate your salon visits and hair care consultations.</p>
@@ -191,7 +191,7 @@ export const Footer: React.FC<FooterProps> = ({ onScrollToSection, onOpenPriceLi
             <div className="mt-6 flex justify-end">
               <button
                 onClick={() => setLegalModal(null)}
-                className="px-6 py-2 bg-stone-900 text-white rounded-full text-xs font-semibold uppercase hover:bg-rose-400 hover:text-stone-900 transition-colors cursor-pointer"
+                className="px-6 py-2 bg-stone-900 dark:bg-white text-white dark:text-stone-950 rounded-full text-xs font-semibold uppercase hover:bg-rose-500 dark:hover:bg-rose-400 hover:text-white dark:hover:text-stone-950 transition-colors cursor-pointer"
               >
                 Close
               </button>

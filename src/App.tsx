@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { AboutSection } from './components/AboutSection';
@@ -25,6 +25,30 @@ export default function App() {
   const [activeLightboxItem, setActiveLightboxItem] = useState<GalleryItem | null>(null);
   const [completedBooking, setCompletedBooking] = useState<any | null>(null);
   const [isPriceListOpen, setIsPriceListOpen] = useState(false);
+
+  // Light / Dark Theme State Management
+  const [theme, setTheme] = useState<'light' | 'dark'>(() => {
+    if (typeof window !== 'undefined') {
+      const savedTheme = localStorage.getItem('stage_theme') as 'light' | 'dark' | null;
+      if (savedTheme) return savedTheme;
+      if (window.matchMedia('(prefers-color-scheme: dark)').matches) return 'dark';
+    }
+    return 'light';
+  });
+
+  useEffect(() => {
+    const root = document.documentElement;
+    if (theme === 'dark') {
+      root.classList.add('dark');
+    } else {
+      root.classList.remove('dark');
+    }
+    localStorage.setItem('stage_theme', theme);
+  }, [theme]);
+
+  const toggleTheme = () => {
+    setTheme((prev) => (prev === 'light' ? 'dark' : 'light'));
+  };
 
   const scrollToBooking = (serviceId?: string, stylistId?: string) => {
     if (serviceId) setSelectedServiceId(serviceId);
@@ -71,11 +95,13 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-stone-50 text-stone-800 font-sans antialiased selection:bg-rose-200 selection:text-stone-900">
+    <div className="min-h-screen bg-stone-50 dark:bg-stone-950 text-stone-800 dark:text-stone-100 font-sans antialiased selection:bg-rose-200 dark:selection:bg-rose-900 selection:text-stone-900 dark:selection:text-rose-100 transition-colors duration-300">
       {/* 1. Navigation */}
       <Navbar
         onOpenBooking={() => scrollToBooking()}
         onOpenPriceList={() => setIsPriceListOpen(true)}
+        theme={theme}
+        onToggleTheme={toggleTheme}
       />
 
       {/* 2. Hero Section */}
