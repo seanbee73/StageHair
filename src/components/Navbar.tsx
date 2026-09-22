@@ -352,7 +352,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                   <Instagram className="w-4 h-4" />
                 </a>
                 <a
-                  href="https://www.facebook.com"
+                  href="https://www.facebook.com/Stagehairdeisgn/"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Facebook"

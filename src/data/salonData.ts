@@ -435,6 +435,6 @@ export const SALON_INFO = {
   ],
   socials: {
     instagram: "https://www.instagram.com/stagehairdesign",
-    facebook: "https://www.facebook.com"
+    facebook: "https://www.facebook.com/Stagehairdeisgn/"
   }
 };
